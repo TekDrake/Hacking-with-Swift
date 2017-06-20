@@ -12,6 +12,8 @@
 		3115EE461EF85C8400EC4946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3115EE441EF85C8400EC4946 /* Main.storyboard */; };
 		3115EE481EF85C8400EC4946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3115EE471EF85C8400EC4946 /* Assets.xcassets */; };
 		3115EE4B1EF85C8400EC4946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3115EE491EF85C8400EC4946 /* LaunchScreen.storyboard */; };
+		3115EE541EF9C1A700EC4946 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3115EE521EF9C1A700EC4946 /* level1.txt */; };
+		3115EE551EF9C1A700EC4946 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3115EE531EF9C1A700EC4946 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3115EE471EF85C8400EC4946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3115EE4A1EF85C8400EC4946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3115EE4C1EF85C8400EC4946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3115EE521EF9C1A700EC4946 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		3115EE531EF9C1A700EC4946 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				3115EE441EF85C8400EC4946 /* Main.storyboard */,
 				3115EE471EF85C8400EC4946 /* Assets.xcassets */,
 				3115EE491EF85C8400EC4946 /* LaunchScreen.storyboard */,
+				3115EE521EF9C1A700EC4946 /* level1.txt */,
+				3115EE531EF9C1A700EC4946 /* level2.txt */,
 				3115EE4C1EF85C8400EC4946 /* Info.plist */,
 			);
 			path = Project8;
@@ -124,7 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3115EE551EF9C1A700EC4946 /* level2.txt in Resources */,
 				3115EE4B1EF85C8400EC4946 /* LaunchScreen.storyboard in Resources */,
+				3115EE541EF9C1A700EC4946 /* level1.txt in Resources */,
 				3115EE481EF85C8400EC4946 /* Assets.xcassets in Resources */,
 				3115EE461EF85C8400EC4946 /* Main.storyboard in Resources */,
 			);
