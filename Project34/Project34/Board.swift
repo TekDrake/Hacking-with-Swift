@@ -15,6 +15,75 @@ enum ChipColor: Int {
     case black
 }
 
+extension Board: GKGameModel {
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Board()
+        copy.setGameModel(self)
+        return copy
+    }
+    
+    func setGameModel(_ gameModel: GKGameModel) {
+        if let board = gameModel as? Board {
+            slots = board.slots
+            currentPlayer = board.currentPlayer
+        }
+    }
+    
+    func gameModelUpdates(for player: GKGameModelPlayer) -> [GKGameModelUpdate]? {
+        // 1 We optionally downcast our GKGameModelPlayer parameter into a Player object.
+        if let playerObject = player as? Player {
+            // 2 If the player or their opponent has won, return nil to signal no moves are available.
+            if isWin(for: playerObject) || isWin(for: playerObject.opponent) {
+                return nil
+            }
+            
+            // 3 Otherwise, create a new array that will hold Move objects.
+            var moves = [Move]()
+            
+            // 4 Loop through every column in the board, asking whether the player can move in that column.
+            for column in 0 ..< Board.width {
+                if canMove(in: column) {
+                    // 5 If so, create a new Move object for that column, and add it to the array.
+                    moves.append(Move(column: column))
+                }
+            }
+            
+            // 6 Finally, return the array to tell the AI all the possible moves it can make.
+            return moves
+        }
+        
+        return nil
+    }
+    
+    func apply(_ gameModelUpdate: GKGameModelUpdate) {
+        if let move = gameModelUpdate as? Move {
+            add(chip: currentPlayer.chip, in: move.column)
+            currentPlayer = currentPlayer.opponent
+        }
+    }
+    
+    func score(for player: GKGameModelPlayer) -> Int {
+        if let playerObject = player as? Player {
+            if isWin(for: playerObject) {
+                return 1000
+            } else if isWin(for: playerObject.opponent) {
+                return -1000
+            }
+        }
+        
+        return 0
+    }
+    
+    var players: [GKGameModelPlayer]? {
+        return Player.allPlayers
+    }
+    
+    var activePlayer: GKGameModelPlayer? {
+        return currentPlayer
+    }
+}
+
 class Board: NSObject {
     static var width = 7
     static var height = 6
