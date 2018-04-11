@@ -1,10 +1,8 @@
-# [Hacking with Swift](https://www.hackingwithswift.com/read)
+# Hacking with Swift
 
-```
-Hacking with Swift is a complete free Swift tutorial.
+[Hacking with Swift](https://www.hackingwithswift.com/read) is a complete free Swift tutorial.
 
 This repo contains 39 complete Swift projects that teach UIKit, SpriteKit, Core Animation, Core Graphics, Core Data, Core Image and more.
-```
 
 **Table of Contents**
   * Introduction: Swift for Complete Beginners
